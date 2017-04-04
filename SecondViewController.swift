@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   var year = ""
   var tournamentID = ""
@@ -31,11 +31,13 @@ class SecondViewController: UIViewController {
       }
       
 
-      let url = URL(string: "https://api.sportradar.us/golf-t2/teetimes/pga/2017/tournaments/" + tournamentID + "/Rounds/" + round + "/teetimes.json?api_key=u4thm6q3payb9kw6sp8yq3sm")!
+//      let url = URL(string: "https://api.sportradar.us/golf-t2/teetimes/pga/2017/tournaments/" + tournamentID + "/Rounds/" + round + "/teetimes.json?api_key=u4thm6q3payb9kw6sp8yq3sm")!
+      
+      let url = URL(string: "https://api.sportradar.us/golf-t2/teetimes/pga/2017/tournaments/df42e950-c6a7-4b3d-8b93-41efa1bfdf82/Rounds/4/teetimes.json?api_key=u4thm6q3payb9kw6sp8yq3sm")!
       
       let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         if error != nil {
-          print(error)
+          print(error!)
         } else {
           
           if let urlContent = data {
@@ -46,8 +48,25 @@ class SecondViewController: UIViewController {
 //              print(jsonResult)
               
               if let name = jsonResult["name"] as? String {
-                print(name)
+                  print(name)
               }
+              
+//              if let round = (jsonResult["round"] as? NSDictionary) {
+//                print(round)
+//              }
+              
+//              if let round = (((jsonResult["round"] as? NSDictionary)?["courses"] as? NSArray)?[0]) {
+//                print(round)
+//              }
+              
+              if let pairing = ((((jsonResult["round"] as? NSDictionary)?["courses"] as? NSArray)?[0] as? NSDictionary)?["pairings"] as? NSArray)?[4] as? NSDictionary {
+                print(pairing)
+                
+                if let tee_time = pairing["tee_time"] as? String {
+                  print(tee_time)
+                }
+              }
+              
               
             } catch {
             // process errors
@@ -56,8 +75,20 @@ class SecondViewController: UIViewController {
         }
       }
       task.resume()
-
   }
+  
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 5
+  }
+  
+  internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+    cell.textLabel?.text = "Row \(indexPath.row)"
+    return cell
+    
+  }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

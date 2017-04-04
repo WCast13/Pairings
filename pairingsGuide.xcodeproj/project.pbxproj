@@ -312,6 +312,7 @@
 				3DA68A341E8BF71D00C988E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
