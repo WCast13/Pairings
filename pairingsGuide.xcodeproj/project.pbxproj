@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D7D0BB01EA5375800EEF3CC /* PairingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7D0BAF1EA5375800EEF3CC /* PairingsTableViewCell.swift */; };
+		3D7F9FEC1E9486F500C37B67 /* Pairings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F9FEA1E9486F500C37B67 /* Pairings.xcdatamodeld */; };
 		3DA68A241E8BF71D00C988E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA68A231E8BF71D00C988E0 /* AppDelegate.swift */; };
 		3DA68A261E8BF71D00C988E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA68A251E8BF71D00C988E0 /* ViewController.swift */; };
 		3DA68A291E8BF71D00C988E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA68A271E8BF71D00C988E0 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D7D0BAF1EA5375800EEF3CC /* PairingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairingsTableViewCell.swift; sourceTree = "<group>"; };
+		3D7F9FEB1E9486F500C37B67 /* Pairings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pairings.xcdatamodel; sourceTree = "<group>"; };
 		3DA68A201E8BF71D00C988E0 /* pairingsGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pairingsGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA68A231E8BF71D00C988E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA68A251E8BF71D00C988E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,10 +66,12 @@
 				3DA68A231E8BF71D00C988E0 /* AppDelegate.swift */,
 				3DA68A251E8BF71D00C988E0 /* ViewController.swift */,
 				3DA68A3C1E8CB29000C988E0 /* SecondViewController.swift */,
+				3D7D0BAF1EA5375800EEF3CC /* PairingsTableViewCell.swift */,
 				3DA68A271E8BF71D00C988E0 /* Main.storyboard */,
 				3DA68A2A1E8BF71D00C988E0 /* Assets.xcassets */,
 				3DA68A2C1E8BF71D00C988E0 /* LaunchScreen.storyboard */,
 				3DA68A2F1E8BF71D00C988E0 /* Info.plist */,
+				3D7F9FEA1E9486F500C37B67 /* Pairings.xcdatamodeld */,
 				3DA68A361E8C076F00C988E0 /* Notes.rtf */,
 				3DA68A351E8C006B00C988E0 /* MyPlayground.playground */,
 			);
@@ -148,6 +154,8 @@
 			files = (
 				3DA68A3D1E8CB29000C988E0 /* SecondViewController.swift in Sources */,
 				3DA68A261E8BF71D00C988E0 /* ViewController.swift in Sources */,
+				3D7D0BB01EA5375800EEF3CC /* PairingsTableViewCell.swift in Sources */,
+				3D7F9FEC1E9486F500C37B67 /* Pairings.xcdatamodeld in Sources */,
 				3DA68A241E8BF71D00C988E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +323,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3D7F9FEA1E9486F500C37B67 /* Pairings.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3D7F9FEB1E9486F500C37B67 /* Pairings.xcdatamodel */,
+			);
+			currentVersion = 3D7F9FEB1E9486F500C37B67 /* Pairings.xcdatamodel */;
+			path = Pairings.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3DA68A181E8BF71D00C988E0 /* Project object */;
 }
